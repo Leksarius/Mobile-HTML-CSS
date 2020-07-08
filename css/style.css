@@ -1,0 +1,101 @@
+@font-face {
+    font-family: opensans-regular;
+    src: url(../fonts/opensans-regular.ttf);
+}
+
+@font-face {
+    font-family: opensans-bold;
+    src: url(../fonts/opensans-bold.ttf);
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+
+    width: 375px;
+    margin: 0 auto;
+}
+
+.clr:after {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+/* =======menu======= */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.logo {
+    margin: 30px 0 82px 0;
+}
+
+.menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 343px;
+    height: 50px;
+    background: #979797;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    font-family: Open Sans;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 22px;
+    color: #ffffff;
+    letter-spacing: -0.408px;
+}
+
+.menu-btn:active {
+    background: #0D66B3;
+}
+
+/* =======/menu======= */
+/* =======authorization======= */
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background: #5B6778;
+}
+
+.authoriz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 134px 0 30px 0;
+}
+
+.authoriz-txt {
+    font-family: Open Sans;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #405965;
+}
+
+.txt {
+    font-family: Open Sans;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #979797;
+}
+
+/* =======/authorization======= */
