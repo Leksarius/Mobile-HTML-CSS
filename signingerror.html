@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Документ подписан</title>
+    <title>Ошибка подписания</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,18 +27,11 @@
             </main>
         </div>
         <div class="signingok">
-            <div id="floatingBarsG">
-                <div class="blockG" id="rotateG_01"></div>
-                <div class="blockG" id="rotateG_02"></div>
-                <div class="blockG" id="rotateG_03"></div>
-                <div class="blockG" id="rotateG_04"></div>
-                <div class="blockG" id="rotateG_05"></div>
-                <div class="blockG" id="rotateG_06"></div>
-                <div class="blockG" id="rotateG_07"></div>
-                <div class="blockG" id="rotateG_08"></div>
-            </div>
-            <span class="signingok-txt">Документ успешно подписан!</span>
-            <p><input type="button" id="submit-sign" value="Сохранить файл подписи"></p>
+            <svg class="error-img" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.0867 22L43.6185 38.5318C43.8728 38.9133 44 39.2948 44 39.6763C44 40.185 43.8728 40.4393 43.6185 40.6936L40.6936 43.6185C40.4393 43.8728 40.0578 44 39.6763 44C39.1676 44 38.7861 43.8728 38.5318 43.6185L22 27.0867L5.46821 43.6185C5.08671 43.8728 4.7052 44 4.3237 44C3.81503 44 3.56069 43.8728 3.30636 43.6185L0.381503 40.6936C0.127168 40.4393 0 40.185 0 39.6763C0 39.2948 0.127168 38.9133 0.381503 38.5318L16.9133 22L0.381503 5.46821C0.127168 5.21387 0 4.83237 0 4.3237C0 3.9422 0.127168 3.56069 0.381503 3.30636L3.30636 0.381503C3.56069 0.127168 3.81503 0 4.3237 0C4.7052 0 5.08671 0.127168 5.46821 0.381503L22 16.9133L38.5318 0.381503C38.7861 0.127168 39.1676 0 39.6763 0C40.0578 0 40.4393 0.127168 40.6936 0.381503L43.6185 3.30636C43.8728 3.56069 44 3.9422 44 4.3237C44 4.83237 43.8728 5.21387 43.6185 5.46821L27.0867 22Z" fill="#F44F4F" />
+            </svg>
+            <span class="signingok-txt">Произошла ошибка</span>
+            <p><input type="button" id="submit-sign" value="Вернуться назад"></p>
         </div>
     </div>
 </body></html>
