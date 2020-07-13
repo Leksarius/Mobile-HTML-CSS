@@ -1,25 +1,28 @@
 @font-face {
-    font-family: opensans-regular;
+    font-family: 'Open Sans';
     src: url(../fonts/opensans-regular.ttf);
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: opensans-bold;
+    font-family: 'Open Sans';
     src: url(../fonts/opensans-bold.ttf);
+    font-weight: bold;
+    font-style: normal;
 }
 
 html,
 body {
     height: 100%;
     margin: 0;
+    font-family: Open Sans;
 }
 
 .container {
     width: 375px;
     margin: 0 auto;
-}
-
-.colorpage {
+    position: relative;
     background-color: #F4F7FC;
     height: 100%;
 }
@@ -56,7 +59,6 @@ body {
     border-radius: 50px;
     margin-bottom: 15px;
     text-decoration: none;
-    font-family: Open Sans;
     font-weight: normal;
     font-size: 17px;
     line-height: 22px;
@@ -65,7 +67,7 @@ body {
 }
 
 .menu-btn:active {
-    background: #0D66B3;
+    background: #6AA5D9;
 }
 
 .main-header {
@@ -87,15 +89,12 @@ body {
     align-items: center;
     box-sizing: border-box;
     flex-wrap: wrap;
-        position: relative;
-
 }
 
 .authoriz-txt {
     display: block;
     width: 100%;
     margin-bottom: 30px;
-    font-family: Open Sans;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
@@ -108,23 +107,29 @@ body {
     margin-left: 16px;
 }
 
-.txt {
+.txt,
+.verifsign {
     display: block;
     width: 100%;
-    margin-bottom: 13px;
-    font-family: Open Sans;
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
     color: #979797;
+}
+
+.txt {
+    margin-bottom: 13px;
     float: left;
     padding-left: 16px;
+}
+
+.verifsign {
+    text-align: center;
 }
 
 #phone {
     width: 343px;
     height: 50px;
-    font-family: Open Sans;
     font-style: normal;
     font-size: 17px;
     line-height: 17px;
@@ -137,12 +142,11 @@ body {
     margin-bottom: 25px;
 }
 
-#submit {
-    width: 343px;
+#submit,
+#submit-sign {
     height: 50px;
-    background: #979797;
+    background: #0D66B3;
     color: #ffffff;
-    font-family: Open Sans;
     font-style: normal;
     font-size: 17px;
     line-height: 22px;
@@ -151,8 +155,18 @@ body {
     border: 0;
 }
 
-#submit:active {
-    background: #0D66B3;
+#submit {
+    width: 343px;
+}
+
+#submit-sign {
+    width: 283px;
+    margin: 0 10px;
+}
+
+#submit:active,
+#submit-sign:active {
+    background: #6AA5D9;
 }
 
 .wrongpass {
@@ -162,7 +176,6 @@ body {
 }
 
 .wrongpass-txt {
-    font-family: Open Sans;
     font-style: normal;
     font-size: 14px;
     line-height: 22px;
@@ -212,7 +225,6 @@ body {
     width: 100%;
     height: 22px;
     align-content: center;
-    font-family: Open Sans;
     font-style: normal;
     font-size: 14px;
     line-height: 22px;
@@ -222,7 +234,6 @@ body {
 .signdoc {
     margin-left: 20px;
     text-decoration: none;
-    font-family: Open Sans;
     font-style: normal;
     font-size: 14px;
     line-height: 22px;
@@ -234,8 +245,201 @@ body {
 .signingok {
     position: absolute;
     left: 36px;
-    top: -10px;
+    top: 82px;
     width: 303px;
     height: 303px;
     background-color: #ffffff;
+    padding: 43px 0 54px 0;
+    box-sizing: border-box;
 }
+
+.signingok-txt {
+    display: block;
+    width: 190px;
+    margin: 0 65px 34px 56px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+}
+
+.error-img {
+    margin: 20px 128px 63px 131px;
+}
+
+.line {
+    display: block;
+    width: 100%;
+    margin: 27px 16px;
+    border: 1px solid #E5E5E5;
+}
+
+.verifsign-img {
+    position: absolute;
+    left: 132px;
+    top: 341px;
+}
+
+.verifok-txt {
+    margin: 0 16px;
+    width: 100%;
+}
+
+.verifok-txt-goodresult,
+.verifok-txt-badresult {
+    display: block;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 8px 0;
+}
+
+.verifok-txt-goodresult{
+    color: #00DA8A;
+}
+
+.verifok-txt-badresult {
+    color: #F44F4F;
+}
+
+.verifok-txt-message {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+    margin: 0 0 10px 0;
+}
+
+.verifok-txt-contact {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px 0;
+}
+
+.verifok-txt-contact-fio,
+.verifok-txt-contact-mail,
+.verifok-txt-sert-name {
+    font-weight: bold;
+}
+
+.verifok-txt-contact-fio,
+.verifok-txt-contact-adres,
+.verifok-txt-sert-name, 
+.verifok-txt-sert-info {
+    color: #000000;
+    margin: 0;
+}
+
+.verifok-txt-contact-fio,
+.verifok-txt-contact-adres,
+.verifok-txt-contact-mail,
+.verifok-txt-sert {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.verifok-txt-contact-mail {
+    color: #0D66B3;
+}
+
+.verifok-txt-sert-preinfo {
+    color: #979797;
+}
+
+.algo {
+    
+}
+
+/*=====анимация загрузки=====*/
+
+#floatingBarsG {
+    position: relative;
+    width: 60px;
+    height: 75px;
+    margin: auto;
+    margin-bottom: 34px;
+}
+
+.blockG {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 10px;
+    height: 23px;
+    border-radius: 8px 8px 0 0;
+    transform: scale(0.4);
+    animation-name: fadeG;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+#rotateG_01 {
+    left: 0;
+    top: 27px;
+    animation-delay: 0.45s;
+    transform: rotate(-90deg);
+}
+
+#rotateG_02 {
+    left: 8px;
+    top: 10px;
+    animation-delay: 0.6s;
+    transform: rotate(-45deg);
+}
+
+#rotateG_03 {
+    left: 25px;
+    top: 3px;
+    animation-delay: 0.75s;
+    transform: rotate(0deg);
+}
+
+#rotateG_04 {
+    right: 8px;
+    top: 10px;
+    animation-delay: 0.9s;
+    transform: rotate(45deg);
+}
+
+#rotateG_05 {
+    right: 0;
+    top: 27px;
+    animation-delay: 1.05s;
+    transform: rotate(90deg);
+}
+
+#rotateG_06 {
+    right: 8px;
+    bottom: 7px;
+    animation-delay: 1.2s;
+    transform: rotate(135deg);
+}
+
+#rotateG_07 {
+    bottom: 0;
+    left: 25px;
+    animation-delay: 1.35s;
+    transform: rotate(180deg);
+}
+
+#rotateG_08 {
+    left: 8px;
+    bottom: 7px;
+    animation-delay: 1.5s;
+    transform: rotate(-135deg);
+}
+
+@keyframes fadeG {
+    0% {
+        background-color: rgb(13, 102, 179);
+    }
+
+    100% {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+/*=====/анимация загрузки=====*/
